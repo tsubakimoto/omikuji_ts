@@ -1,15 +1,19 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
-    <link rel="stylesheet" href="app.css" type="text/css" />
-    <script src="app.js"></script>
+    <title>おみくじ</title>
 </head>
 <body>
-    <h1>TypeScript HTML App</h1>
+    <h1>おみくじ</h1>
+    <input type="button" value="あなたの運勢は？" onclick="getOmikuji();" />
 
-    <div id="content"></div>
+    <script>
+        function getOmikuji() {
+            var omikuji = ["大吉", "中吉", "小吉"];
+            var result = Math.floor(Math.random() * omikuji.length);
+            alert(omikuji[result]);
+        }
+    </script>
 </body>
 </html>
